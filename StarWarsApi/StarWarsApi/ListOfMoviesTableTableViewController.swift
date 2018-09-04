@@ -9,15 +9,18 @@
 import UIKit
 
 class ListOfMoviesTableTableViewController: UITableViewController {
+    
+    struct movieDetails {
+        var filmTitle: String?
+        var releaseDate: String?
+        var directors: String?
+        var filmImage: String?
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     override func didReceiveMemoryWarning() {

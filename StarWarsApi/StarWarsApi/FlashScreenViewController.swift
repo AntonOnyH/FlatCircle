@@ -12,15 +12,18 @@ class FlashScreenViewController: UIViewController {
     
     @IBOutlet weak var starWarsImageView: UIImageView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-starWarsImageView.image = #imageLiteral(resourceName: "StarWarsLogo")
+        starWarsImageView.image = #imageLiteral(resourceName: "StarWarsLogo")
+        perform(#selector(showNavigation), with: nil, afterDelay: 5)
     }
-
+        
+    @objc func showNavigation()  {
+        performSegue(withIdentifier: "showNavigation", sender: self)
+    }
     
     
-
     
-
+    
 }
