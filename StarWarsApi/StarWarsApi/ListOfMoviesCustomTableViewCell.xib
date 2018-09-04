@@ -67,6 +67,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="directors" destination="Tzm-aA-0Z6" id="WQd-OW-ogJ"/>
+                <outlet property="filmImage" destination="blc-yE-cCI" id="gnD-dh-CDM"/>
+                <outlet property="filmTitles" destination="qlK-jU-STj" id="4bV-oE-X94"/>
+                <outlet property="producers" destination="Zvc-dW-qpa" id="za8-g7-Jrp"/>
+                <outlet property="releaseDate" destination="A8f-Fu-xUv" id="956-im-og6"/>
+            </connections>
             <point key="canvasLocation" x="-44" y="-17"/>
         </tableViewCell>
     </objects>

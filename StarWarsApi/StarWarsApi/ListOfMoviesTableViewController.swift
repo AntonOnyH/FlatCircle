@@ -8,19 +8,23 @@
 
 import UIKit
 
-struct movieDetails: Codable {
+struct ListOfMoviesCellDetails: Codable {
     var filmTitle: String?
     var releaseDate: String?
     var directors: String?
-    var filmImage: String?
+    var producers: String?
+    var filmImage: UIImage?
 }
 
-class ListOfMoviesTableTableViewController: UITableViewController {
+class ListOfMoviesTableViewController: UITableViewController {
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     ListOfMoviesTableViewController.
+        
+        
         let moviesUrl = URL(string: "https://swapi.co/api/")
 //        let decoder = JSONDecoder()
         let task = URLSession.shared.dataTask(with: moviesUrl!) {(data, response, error)
@@ -49,6 +53,10 @@ class ListOfMoviesTableTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListOfMoviesCustomTableViewCell", for: indexPath) as! ListOfMoviesCustomTableViewCell
     }
     
     /*
