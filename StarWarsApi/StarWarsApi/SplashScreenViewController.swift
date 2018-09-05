@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlashScreenViewController: UIViewController {
+class SplashScreenViewController: UIViewController {
     
     @IBOutlet weak var starWarsImageView: UIImageView!
     
@@ -17,6 +17,9 @@ class FlashScreenViewController: UIViewController {
         super.viewDidLoad()
         starWarsImageView.image = #imageLiteral(resourceName: "StarWarsLogo")
         perform(#selector(showNavigation), with: nil, afterDelay: 5)
+    }
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
         
     @objc func showNavigation()  {

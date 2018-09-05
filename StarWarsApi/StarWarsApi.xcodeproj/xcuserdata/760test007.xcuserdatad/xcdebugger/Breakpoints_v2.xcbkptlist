@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWarsApi/ListOfMoviesTableViewController.swift"
+            timestampString = "557859963.864406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "movies"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StarWarsApi.ListOfMoviesTableViewController.movies.didset : Swift.Optional&lt;StarWarsApi.StarWarsFilms&gt;"
+                  moduleName = "StarWarsApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/760test007/Documents/Xcode%20Projects/FlatCircle/StarWarsApi/StarWarsApi/ListOfMoviesTableViewController.swift"
+                  timestampString = "557851889.508757"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in StarWarsApi.ListOfMoviesTableViewController.movies.didset : Swift.Optional&lt;StarWarsApi.StarWarsFilms&gt;"
+                  moduleName = "StarWarsApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/760test007/Documents/Xcode%20Projects/FlatCircle/StarWarsApi/StarWarsApi/ListOfMoviesTableViewController.swift"
+                  timestampString = "557851889.511852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

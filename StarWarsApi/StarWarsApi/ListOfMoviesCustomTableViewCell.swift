@@ -17,18 +17,21 @@ class ListOfMoviesCustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var filmImage: UIImageView!
     
-    var movieDetails: CellDetailsForMovies
-    
+    var movieDetails: CellDetailsForMovie?
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        filmTitles.text = movieDetails.filmTitle
-        releaseDate.text = movieDetails.releaseDate
-        directors.text = movieDetails.directors
-        producers.text = movieDetails.producers
-//        filmImage.image = movieDetails.filmImage
+    }
+    
+    func configure(with movie: CellDetailsForMovie) {
+                filmTitles.text = movie.title
+                releaseDate.text = movie.releaseDate
+                directors.text = movie.director
+                producers.text = movie.producer
+                filmImage.image = #imageLiteral(resourceName: "placeholder")
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
