@@ -17,8 +17,7 @@ class ListOfMoviesCustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var filmImage: UIImageView!
     
-    var movieDetails: ListOfMoviesCellDetails
-    
+    var movieDetails: CellDetailsForMovies
     
     
 
@@ -29,7 +28,7 @@ class ListOfMoviesCustomTableViewCell: UITableViewCell {
         releaseDate.text = movieDetails.releaseDate
         directors.text = movieDetails.directors
         producers.text = movieDetails.producers
-        filmImage.image = movieDetails.filmImage
+//        filmImage.image = movieDetails.filmImage
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

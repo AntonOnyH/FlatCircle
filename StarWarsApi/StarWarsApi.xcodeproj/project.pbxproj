@@ -13,9 +13,10 @@
 		77FF4ACC213E94B300480E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF4ACA213E94B300480E7B /* LaunchScreen.storyboard */; };
 		77FF4AD4213E960200480E7B /* FlashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4AD3213E960200480E7B /* FlashScreenViewController.swift */; };
 		77FF4AD6213E965500480E7B /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4AD5213E965500480E7B /* MovieDetailsViewController.swift */; };
-		77FF4AD9213E971100480E7B /* ListOfMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4AD7213E971100480E7B /* ListOfMoviesTableViewController.swift */; };
 		77FF4ADD213E97C200480E7B /* ListOfMoviesCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4ADB213E97C200480E7B /* ListOfMoviesCustomTableViewCell.swift */; };
 		77FF4ADE213E97C200480E7B /* ListOfMoviesCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77FF4ADC213E97C200480E7B /* ListOfMoviesCustomTableViewCell.xib */; };
+		77FF4AE0213FD4DF00480E7B /* Movie Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4ADF213FD4DE00480E7B /* Movie Fetcher.swift */; };
+		77FF4AE2213FECEB00480E7B /* ListOfMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF4AE1213FECEB00480E7B /* ListOfMoviesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,10 @@
 		77FF4ACD213E94B300480E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FF4AD3213E960200480E7B /* FlashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashScreenViewController.swift; sourceTree = "<group>"; };
 		77FF4AD5213E965500480E7B /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
-		77FF4AD7213E971100480E7B /* ListOfMoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesTableViewController.swift; sourceTree = "<group>"; };
 		77FF4ADB213E97C200480E7B /* ListOfMoviesCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesCustomTableViewCell.swift; sourceTree = "<group>"; };
 		77FF4ADC213E97C200480E7B /* ListOfMoviesCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfMoviesCustomTableViewCell.xib; sourceTree = "<group>"; };
+		77FF4ADF213FD4DE00480E7B /* Movie Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie Fetcher.swift"; sourceTree = "<group>"; };
+		77FF4AE1213FECEB00480E7B /* ListOfMoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMoviesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				77FF4AC1213E94B000480E7B /* AppDelegate.swift */,
+				77FF4AD3213E960200480E7B /* FlashScreenViewController.swift */,
+				77FF4ADF213FD4DE00480E7B /* Movie Fetcher.swift */,
 				77FF4ADB213E97C200480E7B /* ListOfMoviesCustomTableViewCell.swift */,
 				77FF4ADC213E97C200480E7B /* ListOfMoviesCustomTableViewCell.xib */,
-				77FF4AD7213E971100480E7B /* ListOfMoviesTableViewController.swift */,
-				77FF4AD3213E960200480E7B /* FlashScreenViewController.swift */,
 				77FF4AD5213E965500480E7B /* MovieDetailsViewController.swift */,
+				77FF4AE1213FECEB00480E7B /* ListOfMoviesTableViewController.swift */,
 				77FF4AC5213E94B000480E7B /* Main.storyboard */,
 				77FF4AC8213E94B300480E7B /* Assets.xcassets */,
 				77FF4ACA213E94B300480E7B /* LaunchScreen.storyboard */,
@@ -149,7 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77FF4ADD213E97C200480E7B /* ListOfMoviesCustomTableViewCell.swift in Sources */,
-				77FF4AD9213E971100480E7B /* ListOfMoviesTableViewController.swift in Sources */,
+				77FF4AE2213FECEB00480E7B /* ListOfMoviesTableViewController.swift in Sources */,
+				77FF4AE0213FD4DF00480E7B /* Movie Fetcher.swift in Sources */,
 				77FF4AD6213E965500480E7B /* MovieDetailsViewController.swift in Sources */,
 				77FF4AD4213E960200480E7B /* FlashScreenViewController.swift in Sources */,
 				77FF4AC2213E94B000480E7B /* AppDelegate.swift in Sources */,
