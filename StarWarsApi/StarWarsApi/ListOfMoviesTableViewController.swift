@@ -59,6 +59,11 @@ class ListOfMoviesTableViewController: UITableViewController {
         return 300
         
     }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = movies?.movies[indexPath.row]
+        let controller = storyboard?.instantiateViewController(withIdentifier: "MovieDetails") as! MovieDetailsViewController
+        controller.details = movie
+        navigationController?.pushViewController(controller, animated: true)
+    }
     
 }

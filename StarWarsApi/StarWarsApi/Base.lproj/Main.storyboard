@@ -73,13 +73,25 @@
         <!--Movie Details View Controller-->
         <scene sceneID="mky-ha-0ar">
             <objects>
-                <viewController id="BUr-YN-v1k" customClass="MovieDetailsViewController" customModule="StarWarsApi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BUr-YN-v1k" customClass="MovieDetailsViewController" customModule="StarWarsApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2X-6S-ueT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-Gh-vj3">
+                                <rect key="frame" x="85" y="84" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vPz-lA-Pqn"/>
                     </view>
+                    <connections>
+                        <outlet property="titlelabel" destination="qC4-Gh-vj3" id="lfR-3N-EJ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrA-Eg-whr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

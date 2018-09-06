@@ -10,8 +10,12 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
 
+    @IBOutlet weak var titlelabel: UILabel!
+    var details : CellDetailsForMovie?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        titlelabel.text = details?.title
 
         // Do any additional setup after loading the view.
     }
