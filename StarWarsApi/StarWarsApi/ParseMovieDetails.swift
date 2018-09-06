@@ -14,7 +14,6 @@ struct CellDetailsForMovie: Decodable {
     var releaseDate: String
     var director: String
     var producer: String
-    var filmImage: String?
     
 }
 extension CellDetailsForMovie {
@@ -23,7 +22,6 @@ extension CellDetailsForMovie {
         case releaseDate = "release_date"
         case director = "director"
         case producer = "producer"
-        case filmImage = "filmImage"
     }
     
 
