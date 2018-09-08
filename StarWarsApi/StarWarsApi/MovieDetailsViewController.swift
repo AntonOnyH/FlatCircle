@@ -11,29 +11,25 @@ import UIKit
 class MovieDetailsViewController: UIViewController {
 
     @IBOutlet weak var titlelabel: UILabel!
+    @IBOutlet weak var filmDate: UILabel!
+    @IBOutlet weak var characterNamesLabel: UILabel!
+    @IBOutlet weak var wordsTextField: UITextView!
+    
+    
     var details : CellDetailsForMovie?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titlelabel.text = details?.title
-
-        // Do any additional setup after loading the view.
+        filmDate.text = details?.releaseDate
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+    
+    
 
 }
