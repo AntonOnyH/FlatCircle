@@ -23,6 +23,8 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
         titlelabel.text = details?.title
         filmDate.text = details?.releaseDate
+//        characterNamesLabel.text =
+        wordsTextField.text = details?.openingCrawl
     }
 
    

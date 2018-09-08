@@ -14,17 +14,23 @@ struct CellDetailsForMovie: Decodable {
     var releaseDate: String
     var director: String
     var producer: String
+    var character: [String]
+    var openingCrawl: String
     
 }
+
 extension CellDetailsForMovie {
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case releaseDate = "release_date"
         case director = "director"
         case producer = "producer"
+        case character = "characters"
+        case openingCrawl = "opening_crawl"
     }
-    
-
+}
+struct MovieCharacter: Decodable {
+    let name: String
 }
 
 struct StarWarsFilms: Decodable {
@@ -36,7 +42,9 @@ extension StarWarsFilms{
     }
 }
 
+
 class ParseMovieDetails {
+
     
     func fetchMovieData(completion: @escaping (_ movieData: StarWarsFilms?, _ error: Error?) -> Void) {
         let baseURL = URL(string: "https://swapi.co/api/films/")!
@@ -51,9 +59,28 @@ class ParseMovieDetails {
             }
         }
         task.resume()
-        
     }
     
-    
+    func fetchMovieCharacters(chartersURLs: [String], completion: @escaping (_ arrayOfCharacters: [MovieCharacter]?, _ error: Error?) -> Void) {
+        var characters: [MovieCharacter] = []
+        
+        for characterURL in chartersURLs {
+            let url = URL(string: characterURL)
+            let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+                guard let data = data else {return}
+                do {
+                    let decoder = JSONDecoder()
+                    let movieCharacter = try decoder.decode(MovieCharacter.self, from: data)
+                    characters.append(movieCharacter)
+                }
+                catch {
+                    completion(nil, error)
+                    return
+                }
+            }
+            task.resume()
+        }
+        completion(characters, nil)
+    }    
 }
 
