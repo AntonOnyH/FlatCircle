@@ -16,14 +16,28 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var wordsTextField: UITextView!
     
     
-    var details : CellDetailsForMovie?
-    
+    var details: CellDetailsForMovie? 
+    let parser = ParseMovieDetails()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let movieDetail = details {
+            parser.fetchMovieCharacters(chartersURLs: movieDetail.character) { (characters, error) in
+                guard let characters = characters else { return }
+                var characterString: String = ""
+                
+                for character in characters {
+                    characterString.append("\(character.name), ")
+                }
+                DispatchQueue.main.async {
+                    self.characterNamesLabel.text = characterString
+                }
+            }
+        }
+        
         titlelabel.text = details?.title
         filmDate.text = details?.releaseDate
-//        characterNamesLabel.text =
         wordsTextField.text = details?.openingCrawl
     }
 

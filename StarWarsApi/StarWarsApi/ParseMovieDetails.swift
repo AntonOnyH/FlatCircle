@@ -72,6 +72,9 @@ class ParseMovieDetails {
                     let decoder = JSONDecoder()
                     let movieCharacter = try decoder.decode(MovieCharacter.self, from: data)
                     characters.append(movieCharacter)
+                    if characters.count == chartersURLs.count {
+                        completion(characters, nil)
+                    }
                 }
                 catch {
                     completion(nil, error)
@@ -80,7 +83,6 @@ class ParseMovieDetails {
             }
             task.resume()
         }
-        completion(characters, nil)
-    }    
+    }
 }
 
