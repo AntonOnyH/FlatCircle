@@ -16,6 +16,8 @@ class SplashScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
         starWarsImageView.image = #imageLiteral(resourceName: "StarWarsLogo")
         fetchMovieDetails.fetchMovieData { (movies, error) in
             if let movieData = movies {
