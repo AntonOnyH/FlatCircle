@@ -11,13 +11,24 @@ import UIKit
 class SplashScreenViewController: UIViewController {
     
     @IBOutlet weak var starWarsImageView: UIImageView!
-    
+    let fetchMovieDetails = ParseMovieDetails()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         starWarsImageView.image = #imageLiteral(resourceName: "StarWarsLogo")
-        perform(#selector(showNavigation), with: nil, afterDelay: 5)
+//        perform(#selector(showNavigation), with: nil, afterDelay: 5)
+        
+        fetchMovieDetails.fetchMovieData { (movies, error) in
+            if let movieData = movies {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListOfMoviesTableViewController") as! ListOfMoviesTableViewController
+                vc.movieData = movieData
+                self.navigationController?.pushViewController(vc, animated: true)
+            
+            }
+        }
     }
+    
     override var prefersStatusBarHidden: Bool{
         return true
     }
