@@ -10,27 +10,14 @@ import UIKit
 
 class ListOfMoviesTableViewController: UITableViewController {
     
-    let fetchMovieDetails = ParseMovieDetails()
     let images = [#imageLiteral(resourceName: "StarWarsEp1"), #imageLiteral(resourceName: "StarWarsEp2"), #imageLiteral(resourceName: "StarWarsEp3"), #imageLiteral(resourceName: "StarWarsEp4"), #imageLiteral(resourceName: "StarWarsEp5"), #imageLiteral(resourceName: "StarwarsEp6"), #imageLiteral(resourceName: "StarwarsEP7")]
-
     
-    var movies: StarWarsFilms? {
-        didSet {
-            DispatchQueue.main.async {
-               self.tableView.reloadData()
-            }
-        }
-    }
+    var movies: StarWarsFilms?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchMovieDetails.fetchMovieData { (movies, error) in
-            if let movieData = movies {
-                self.movies = movieData
-            }
-        }
-        
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.items = nil
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
     }
