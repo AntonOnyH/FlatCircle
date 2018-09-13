@@ -8,44 +8,8 @@
 
 import Foundation
 
-
-struct CellDetailsForMovie: Decodable {
-    var title: String
-    var releaseDate: String
-    var director: String
-    var producer: String
-    var character: [String]
-    var openingCrawl: String
-    
-}
-
-extension CellDetailsForMovie {
-    enum CodingKeys: String, CodingKey {
-        case title = "title"
-        case releaseDate = "release_date"
-        case director = "director"
-        case producer = "producer"
-        case character = "characters"
-        case openingCrawl = "opening_crawl"
-    }
-}
-struct MovieCharacter: Decodable {
-    let name: String
-}
-
-struct StarWarsFilms: Decodable {
-    let movies: [CellDetailsForMovie]
-}
-extension StarWarsFilms{
-    enum CodingKeys: String, CodingKey {
-        case movies = "results"
-    }
-}
-
-
 class ParseMovieDetails {
 
-    
     func fetchMovieData(completion: @escaping (_ movieData: StarWarsFilms?, _ error: Error?) -> Void) {
         let baseURL = URL(string: "https://swapi.co/api/films/")!
         let task = URLSession.shared.dataTask(with: baseURL) {(data, response, error) in

@@ -23,7 +23,8 @@ class SplashScreenViewController: UIViewController {
             if let movieData = movies {
                 DispatchQueue.main.async {
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListOfMoviesTableViewController") as! ListOfMoviesTableViewController
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListOfMoviesTableViewController")
+                        as! ListOfMoviesTableViewController
                     vc.starWarsMovies = movieData
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
@@ -33,8 +34,4 @@ class SplashScreenViewController: UIViewController {
     override var prefersStatusBarHidden: Bool{
         return true
     }
-    
-    
-    
-    
 }

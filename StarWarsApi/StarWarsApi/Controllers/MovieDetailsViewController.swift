@@ -9,26 +9,26 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController {
-
+    
     @IBOutlet weak var titlelabel: UILabel!
     @IBOutlet weak var filmDate: UILabel!
     @IBOutlet weak var listOfCharactersTV: UITextView!
     @IBOutlet weak var wordsTextField: UITextView!
     
     
-    var details: CellDetailsForMovie? 
+    var detailForEachMovie: CellDetailsForMovie? 
     let parser = ParseMovieDetails()
+    var contentPointOfAdjustment: CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = .black
         wordsTextField.layer.cornerRadius = 12
-        
-        if let movieDetail = details {
+        contentPointOfAdjustment = CGPoint(x: 0, y: 0)
+        if let movieDetail = detailForEachMovie {
             parser.fetchMovieCharacters(charterURLs: movieDetail.character) { (characters, error) in
                 guard let characters = characters else { return }
                 var characterString: String = ""
-                
                 for character in characters {
                     characterString.append("\(character.name)-")
                 }
@@ -37,17 +37,8 @@ class MovieDetailsViewController: UIViewController {
                 }
             }
         }
-        
-        titlelabel.text = details?.title
-        filmDate.text = details?.releaseDate
-        wordsTextField.text = details?.openingCrawl
+        titlelabel.text = detailForEachMovie?.title
+        filmDate.text = detailForEachMovie?.releaseDate
+        wordsTextField.text = detailForEachMovie?.openingCrawl
     }
-
-   
-    
-
-  
-    
-    
-
 }

@@ -22,8 +22,6 @@ class ListOfMoviesTableViewController: UITableViewController {
 
     }
     
-    
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -49,7 +47,7 @@ class ListOfMoviesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = starWarsMovies?.movies[indexPath.row]
         let controller = storyboard?.instantiateViewController(withIdentifier: "MovieDetails") as! MovieDetailsViewController
-        controller.details = movie
+        controller.detailForEachMovie = movie
         navigationController?.pushViewController(controller, animated: true)
     }
     
