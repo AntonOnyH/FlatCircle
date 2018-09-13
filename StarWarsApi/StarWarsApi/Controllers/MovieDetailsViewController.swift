@@ -17,13 +17,11 @@ class MovieDetailsViewController: UIViewController {
     
     var detailForEachMovie: CellDetailsForMovie? 
     let parser = ParseMovieDetails()
-    var contentPointOfAdjustment: CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = .black
         wordsTextField.layer.cornerRadius = 12
-        contentPointOfAdjustment = CGPoint(x: 0, y: 0)
         if let movieDetail = detailForEachMovie {
             parser.fetchMovieCharacters(charterURLs: movieDetail.character) { (characters, error) in
                 guard let characters = characters else { return }

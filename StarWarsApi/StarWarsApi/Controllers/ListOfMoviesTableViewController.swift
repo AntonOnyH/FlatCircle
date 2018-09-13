@@ -15,6 +15,7 @@ class ListOfMoviesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "StarWars Movies"
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.items = nil
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
