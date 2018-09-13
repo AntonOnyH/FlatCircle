@@ -11,7 +11,6 @@ import UIKit
 class ListOfMoviesTableViewController: UITableViewController {
     
     let images = [#imageLiteral(resourceName: "StarWarsEp1"), #imageLiteral(resourceName: "StarWarsEp2"), #imageLiteral(resourceName: "StarWarsEp3"), #imageLiteral(resourceName: "StarWarsEp4"), #imageLiteral(resourceName: "StarWarsEp5"), #imageLiteral(resourceName: "StarwarsEp6"), #imageLiteral(resourceName: "StarwarsEP7")]
-    
     var starWarsMovies: StarWarsFilms?
     
     override func viewDidLoad() {
@@ -19,7 +18,6 @@ class ListOfMoviesTableViewController: UITableViewController {
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.items = nil
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,24 +29,24 @@ class ListOfMoviesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MovieTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MovieTableViewCell
         cell.filmImageView.image = nil
         
         if let movies = starWarsMovies?.movies[indexPath.row]{
-         cell.configure(with: movies)
+            cell.configure(with: movies)
         }
         cell.filmImageView.image = images[indexPath.row]
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 260
-        
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = starWarsMovies?.movies[indexPath.row]
         let controller = storyboard?.instantiateViewController(withIdentifier: "MovieDetails") as! MovieDetailsViewController
         controller.detailForEachMovie = movie
         navigationController?.pushViewController(controller, animated: true)
     }
-    
 }

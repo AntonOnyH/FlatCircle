@@ -15,7 +15,6 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var listOfCharactersTV: UITextView!
     @IBOutlet weak var wordsTextField: UITextView!
     
-    
     var detailForEachMovie: CellDetailsForMovie? 
     let parser = ParseMovieDetails()
     var contentPointOfAdjustment: CGPoint?

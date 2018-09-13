@@ -16,18 +16,10 @@ class MovieTableViewCell: UITableViewCell {
         @IBOutlet weak var directors: UILabel!
         @IBOutlet weak var producers: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     func configure(with movie: CellDetailsForMovie) {
         filmTitles.text = movie.title
         releaseDate.text = movie.releaseDate
         directors.text = movie.director
         producers.text = movie.producer
-        
-        
     }
-
-    
 }

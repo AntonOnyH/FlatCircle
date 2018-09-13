@@ -28,6 +28,7 @@ extension CellDetailsForMovie {
         case openingCrawl = "opening_crawl"
     }
 }
+
 struct MovieCharacter: Decodable {
     let name: String
 }
@@ -35,6 +36,7 @@ struct MovieCharacter: Decodable {
 struct StarWarsFilms: Decodable {
     let movies: [CellDetailsForMovie]
 }
+
 extension StarWarsFilms{
     enum CodingKeys: String, CodingKey {
         case movies = "results"
