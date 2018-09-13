@@ -12,7 +12,7 @@ class MovieDetailsViewController: UIViewController {
 
     @IBOutlet weak var titlelabel: UILabel!
     @IBOutlet weak var filmDate: UILabel!
-    @IBOutlet weak var listOfCharactersTextField: UITextField!
+    @IBOutlet weak var listOfCharactersTV: UITextView!
     @IBOutlet weak var wordsTextField: UITextView!
     
     
@@ -30,10 +30,10 @@ class MovieDetailsViewController: UIViewController {
                 var characterString: String = ""
                 
                 for character in characters {
-                    characterString.append("\(character.name), ")
+                    characterString.append("\(character.name)-")
                 }
                 DispatchQueue.main.async {
-                    self.listOfCharactersTextField.text = characterString
+                    self.listOfCharactersTV.text = characterString
                 }
             }
         }

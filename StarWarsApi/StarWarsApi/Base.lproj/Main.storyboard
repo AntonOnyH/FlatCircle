@@ -97,15 +97,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a00-gf-Z9g">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Crawler Text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a00-gf-Z9g">
                                 <rect key="frame" x="0.0" y="267" width="375" height="400"/>
                                 <color key="backgroundColor" white="0.12670500814332247" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="RnF-q2-OLD"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="1" green="0.75686274509803919" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="qyq-43-lkM">
@@ -134,25 +133,26 @@
                                     <constraint firstAttribute="height" constant="80" id="pdd-2i-rfT"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Loading Character........" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7c-5g-DaW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Characters Loading....." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eMf-Fu-wNF">
                                 <rect key="frame" x="0.0" y="100" width="375" height="167"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="a00-gf-Z9g" firstAttribute="leading" secondItem="vPz-lA-Pqn" secondAttribute="leading" id="019-nh-L2N"/>
+                            <constraint firstItem="eMf-Fu-wNF" firstAttribute="leading" secondItem="vPz-lA-Pqn" secondAttribute="leading" id="0dK-oq-dya"/>
+                            <constraint firstItem="a00-gf-Z9g" firstAttribute="top" secondItem="eMf-Fu-wNF" secondAttribute="bottom" id="C78-jh-SNH"/>
                             <constraint firstItem="ye5-yg-dGx" firstAttribute="leading" secondItem="vPz-lA-Pqn" secondAttribute="leading" id="FcJ-Kd-AQE"/>
                             <constraint firstItem="vPz-lA-Pqn" firstAttribute="trailing" secondItem="ye5-yg-dGx" secondAttribute="trailing" id="Lyc-Qo-ZTf"/>
+                            <constraint firstItem="eMf-Fu-wNF" firstAttribute="top" secondItem="qyq-43-lkM" secondAttribute="bottom" id="OiV-t5-09W"/>
                             <constraint firstItem="vPz-lA-Pqn" firstAttribute="trailing" secondItem="qyq-43-lkM" secondAttribute="trailing" constant="8" id="Oxj-KX-FuJ"/>
-                            <constraint firstItem="S7c-5g-DaW" firstAttribute="top" secondItem="qyq-43-lkM" secondAttribute="bottom" id="VO2-Aa-8Q6"/>
+                            <constraint firstItem="vPz-lA-Pqn" firstAttribute="trailing" secondItem="eMf-Fu-wNF" secondAttribute="trailing" id="VBX-NM-SDH"/>
                             <constraint firstItem="vPz-lA-Pqn" firstAttribute="bottom" secondItem="a00-gf-Z9g" secondAttribute="bottom" id="aXv-za-qjE"/>
                             <constraint firstItem="vPz-lA-Pqn" firstAttribute="bottom" secondItem="ye5-yg-dGx" secondAttribute="bottom" id="ahj-zv-Kfc"/>
-                            <constraint firstItem="a00-gf-Z9g" firstAttribute="top" secondItem="S7c-5g-DaW" secondAttribute="bottom" id="gmt-Bc-sfO"/>
-                            <constraint firstItem="S7c-5g-DaW" firstAttribute="leading" secondItem="vPz-lA-Pqn" secondAttribute="leading" id="rdp-dH-gKq"/>
                             <constraint firstItem="vPz-lA-Pqn" firstAttribute="trailing" secondItem="a00-gf-Z9g" secondAttribute="trailing" id="t1R-uS-cIx"/>
-                            <constraint firstItem="vPz-lA-Pqn" firstAttribute="trailing" secondItem="S7c-5g-DaW" secondAttribute="trailing" id="vBs-HE-brd"/>
                             <constraint firstItem="qyq-43-lkM" firstAttribute="top" secondItem="vPz-lA-Pqn" secondAttribute="top" id="xYx-22-Coa"/>
                             <constraint firstItem="qyq-43-lkM" firstAttribute="leading" secondItem="vPz-lA-Pqn" secondAttribute="leading" constant="8" id="y6l-Lj-pGF"/>
                         </constraints>
@@ -160,7 +160,7 @@
                     </view>
                     <connections>
                         <outlet property="filmDate" destination="oLN-Al-Xnf" id="1ZZ-lg-XRx"/>
-                        <outlet property="listOfCharactersTextField" destination="S7c-5g-DaW" id="Mt7-S3-hXt"/>
+                        <outlet property="listOfCharactersTV" destination="eMf-Fu-wNF" id="TaJ-bb-N7j"/>
                         <outlet property="titlelabel" destination="uAn-n6-jwl" id="NfZ-uP-f00"/>
                         <outlet property="wordsTextField" destination="a00-gf-Z9g" id="XYO-gx-27R"/>
                     </connections>
