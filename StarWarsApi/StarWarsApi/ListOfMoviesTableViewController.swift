@@ -12,7 +12,7 @@ class ListOfMoviesTableViewController: UITableViewController {
     
     let images = [#imageLiteral(resourceName: "StarWarsEp1"), #imageLiteral(resourceName: "StarWarsEp2"), #imageLiteral(resourceName: "StarWarsEp3"), #imageLiteral(resourceName: "StarWarsEp4"), #imageLiteral(resourceName: "StarWarsEp5"), #imageLiteral(resourceName: "StarwarsEp6"), #imageLiteral(resourceName: "StarwarsEP7")]
     
-    var movies: StarWarsFilms?
+    var starWarsMovies: StarWarsFilms?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +29,14 @@ class ListOfMoviesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies?.movies.count ?? 0
+        return starWarsMovies?.movies.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MovieTableViewCell
         cell.filmImageView.image = nil
         
-        if let movies = movies?.movies[indexPath.row]{
+        if let movies = starWarsMovies?.movies[indexPath.row]{
          cell.configure(with: movies)
         }
         cell.filmImageView.image = images[indexPath.row]
@@ -47,7 +47,7 @@ class ListOfMoviesTableViewController: UITableViewController {
         
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = movies?.movies[indexPath.row]
+        let movie = starWarsMovies?.movies[indexPath.row]
         let controller = storyboard?.instantiateViewController(withIdentifier: "MovieDetails") as! MovieDetailsViewController
         controller.details = movie
         navigationController?.pushViewController(controller, animated: true)

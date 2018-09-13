@@ -23,7 +23,7 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         if let movieDetail = details {
-            parser.fetchMovieCharacters(chartersURLs: movieDetail.character) { (characters, error) in
+            parser.fetchMovieCharacters(charterURLs: movieDetail.character) { (characters, error) in
                 guard let characters = characters else { return }
                 var characterString: String = ""
                 

@@ -61,19 +61,19 @@ class ParseMovieDetails {
         task.resume()
     }
     
-    func fetchMovieCharacters(chartersURLs: [String], completion: @escaping (_ arrayOfCharacters: [MovieCharacter]?, _ error: Error?) -> Void) {
-        var characters: [MovieCharacter] = []
+    func fetchMovieCharacters(charterURLs: [String], completion: @escaping (_ arrayOfCharacters: [MovieCharacter]?, _ error: Error?) -> Void) {
+        var arrayOfMovieCharacters: [MovieCharacter] = []
         
-        for characterURL in chartersURLs {
+        for characterURL in charterURLs {
             let url = URL(string: characterURL)
             let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
                 guard let data = data else {return}
                 do {
                     let decoder = JSONDecoder()
                     let movieCharacter = try decoder.decode(MovieCharacter.self, from: data)
-                    characters.append(movieCharacter)
-                    if characters.count == chartersURLs.count {
-                        completion(characters, nil)
+                    arrayOfMovieCharacters.append(movieCharacter)
+                    if arrayOfMovieCharacters.count == charterURLs.count {
+                        completion(arrayOfMovieCharacters, nil)
                     }
                 }
                 catch {

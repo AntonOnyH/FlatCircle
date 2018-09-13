@@ -12,7 +12,7 @@ class SplashScreenViewController: UIViewController {
     
     @IBOutlet weak var starWarsImageView: UIImageView!
     let fetchMovieDetails = ParseMovieDetails()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +24,16 @@ class SplashScreenViewController: UIViewController {
                 DispatchQueue.main.async {
                     
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListOfMoviesTableViewController") as! ListOfMoviesTableViewController
-                    vc.movies = movieData
+                    vc.starWarsMovies = movieData
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
-    }
+        }
     }
     override var prefersStatusBarHidden: Bool{
         return true
     }
-        
+    
     
     
     
