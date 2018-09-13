@@ -12,7 +12,7 @@ class MovieDetailsViewController: UIViewController {
 
     @IBOutlet weak var titlelabel: UILabel!
     @IBOutlet weak var filmDate: UILabel!
-    @IBOutlet weak var characterNamesLabel: UILabel!
+    @IBOutlet weak var listOfCharactersTextField: UITextField!
     @IBOutlet weak var wordsTextField: UITextView!
     
     
@@ -21,6 +21,8 @@ class MovieDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .black
+        wordsTextField.layer.cornerRadius = 12
         
         if let movieDetail = details {
             parser.fetchMovieCharacters(charterURLs: movieDetail.character) { (characters, error) in
@@ -31,7 +33,7 @@ class MovieDetailsViewController: UIViewController {
                     characterString.append("\(character.name), ")
                 }
                 DispatchQueue.main.async {
-                    self.characterNamesLabel.text = characterString
+                    self.listOfCharactersTextField.text = characterString
                 }
             }
         }
