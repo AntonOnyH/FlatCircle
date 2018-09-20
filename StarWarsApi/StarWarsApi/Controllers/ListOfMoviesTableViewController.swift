@@ -16,6 +16,7 @@ class ListOfMoviesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "StarWars Movies"
+        
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.items = nil
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
@@ -50,4 +51,19 @@ class ListOfMoviesTableViewController: UITableViewController {
         controller.detailForEachMovie = movie
         navigationController?.pushViewController(controller, animated: true)
     }
+  
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        headerView.backgroundColor = UIColor.lightGray
+//
+//        let headerLabel = UILabel(frame: CGRect(x: 30, y: 0, width:
+//            tableView.bounds.size.width, height: tableView.bounds.size.height))
+//        headerLabel.font = UIFont(name: "SFDistantGalaxyAlternate", size: 30)
+//        headerLabel.textColor = UIColor.black
+//        headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
+//        headerLabel.sizeToFit()
+//        headerView.addSubview(headerLabel)
+//
+//        return headerView
+//    }
 }

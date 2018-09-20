@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7702C3222153CBC900EF7E3E /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7702C3212153CBC900EF7E3E /* Starjout.ttf */; };
+		7702C3242153D31200EF7E3E /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7702C3232153D31200EF7E3E /* Starjedi.ttf */; };
+		7702C3262153D60F00EF7E3E /* DistantGalaxy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7702C3252153D60F00EF7E3E /* DistantGalaxy.ttf */; };
 		772015E8214161C90030C50B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772015E6214161C90030C50B /* MovieTableViewCell.swift */; };
 		772015E9214161C90030C50B /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 772015E7214161C90030C50B /* MovieTableViewCell.xib */; };
 		778A0100214A97FB00698352 /* ParsingObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A00FF214A97FB00698352 /* ParsingObjects.swift */; };
@@ -22,7 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7702C3212153CBC900EF7E3E /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
+		7702C3232153D31200EF7E3E /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		7702C3252153D60F00EF7E3E /* DistantGalaxy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DistantGalaxy.ttf; sourceTree = "<group>"; };
 		772015E6214161C90030C50B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		772015E7214161C90030C50B /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		778A00FF214A97FB00698352 /* ParsingObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingObjects.swift; sourceTree = "<group>"; };
@@ -52,7 +54,8 @@
 		7702C3202153CBA600EF7E3E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7702C3212153CBC900EF7E3E /* Starjout.ttf */,
+				7702C3232153D31200EF7E3E /* Starjedi.ttf */,
+				7702C3252153D60F00EF7E3E /* DistantGalaxy.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -178,7 +181,8 @@
 				77FF4ACC213E94B300480E7B /* LaunchScreen.storyboard in Resources */,
 				772015E9214161C90030C50B /* MovieTableViewCell.xib in Resources */,
 				77FF4AC9213E94B300480E7B /* Assets.xcassets in Resources */,
-				7702C3222153CBC900EF7E3E /* Starjout.ttf in Resources */,
+				7702C3262153D60F00EF7E3E /* DistantGalaxy.ttf in Resources */,
+				7702C3242153D31200EF7E3E /* Starjedi.ttf in Resources */,
 				77FF4AC7213E94B000480E7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
